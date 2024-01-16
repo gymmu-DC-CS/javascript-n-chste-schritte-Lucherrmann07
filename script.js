@@ -46,7 +46,49 @@ export function aufgabe05(args) {
   }
 }
 
-export function aufgabe06(args) {}
+export function aufgabe06(args) {
+  const input = args
+  if (input === "") {
+    return false
+  }
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i].toLowerCase()
+    if (currentElement.charCodeAt() < 97 || currentElement.charCodeAt() > 122) {
+      if (currentElement.charCodeAt() != 32) {
+        return true
+      }
+      return false
+    }
+  }
+}
+
+export function aufgabe07(args) {
+  const input = args
+
+  if (
+    (input.indexOf(" und ") != -1 && input.indexOf("Und") != 0) ||
+    input.indexOf("Und") === 0 ||
+    input === "und"
+  )
+    return true
+  else return false
+  } 
+
+  
+  
+  export function aufgabe08(args) {
+    const input = args;
+  
+    var textMit3 = input.replace(/[e]/g, '3');
+  
+    return textMit3;
+  }
+  
+  
+  export function aufgabe09(input) {
+    return input.trim().length === 6
+  }
+
 
 export function aufgabe12(args) {
   const input = args
