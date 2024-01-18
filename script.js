@@ -66,29 +66,30 @@ export function aufgabe07(args) {
   const input = args
 
   if (
-    (input.indexOf(" und ") != -1 && input.indexOf("Und") != 0) ||
+    (input.indexOf("und") != -1 && input.indexOf("Und") != 0) ||
     input.indexOf("Und") === 0 ||
     input === "und"
   )
-    return true
+    /*Erklärung von Bedingung Zeile 68-72:- Sie überprüft ob eine der drei Bedingungen wahr ist
+                                          - Wenn eine von diesen Bedingungen wahr ist, wird der Code innerhalb vom if-Block ausgeführt.
+                                          - Wenn keine der Bedingungen stimmt, wird der Code im if-Block übersprungen.
+    */
+
+      return true
   else return false
-  } 
+}
 
-  
-  
-  export function aufgabe08(args) {
-    const input = args;
-  
-    var textMit3 = input.replace(/[e]/g, '3');
-  
-    return textMit3;
-  }
-  
-  
-  export function aufgabe09(input) {
-    return input.trim().length === 6
-  }
+export function aufgabe08(args) {
+  const input = args
 
+  var textMit3 = input.replace(/[e]/g, "3")
+
+  return textMit3
+}
+
+export function aufgabe09(input) {
+  return input.trim().length === 6
+}
 
 export function aufgabe12(args) {
   const input = args
